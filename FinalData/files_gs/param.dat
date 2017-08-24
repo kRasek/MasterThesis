@@ -1,0 +1,5 @@
+1000	maximum n (fock state) that is contained in truncated Hamiltonian
+0.7853981634	delta
+2	gamma
+1e-08	tolerance
+0	alpha

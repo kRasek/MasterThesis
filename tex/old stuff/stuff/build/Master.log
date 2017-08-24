@@ -1,0 +1,49 @@
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2017.1.3)  28 JUN 2017 15:01
+ restricted system commands enabled.
+**Master.tex
+(./Master.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 1 language(s) loaded.
+(/net/sw/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/net/sw/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\@input{tex/head.aux}
+
+\openout2 = tex/head.aux
+! I can't write on file `tex/head.aux'.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.3 \include{tex/head}
+                    
+Please type another output file name
+! Emergency stop.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.3 \include{tex/head}
+                    
+
+Here is how much of LuaTeX's memory you used:
+ 207 strings out of 495118
+ 100000,89155 words of node,token memory allocated
+ 330 words of node memory still in use:
+   1 hlist, 1 rule, 1 dir, 4 glue, 40 glue_spec, 3 if_stack, 1 open, 2 write nod
+es
+   avail lists: 2:9,3:1,5:1,7:2,9:3
+ 3855 multiletter control sequences out of 65536+600000
+ 15 fonts using 632831 bytes
+ 23i,0n,19p,111b,36s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

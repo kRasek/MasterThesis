@@ -1,0 +1,17 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'Master.blg'
+[34] biber:303> INFO - === Mi Jun 28, 2017, 15:29:23
+[54] Biber.pm:359> INFO - Reading 'Master.bcf'
+[137] Biber.pm:835> INFO - Found 2 citekeys in bib section 0
+[154] Biber.pm:3670> INFO - Processing section 0
+[167] Biber.pm:3840> INFO - Looking for bibtex format file '../Literatur/Literatur.bib' for section 0
+[169] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[177] bibtex.pm:1292> INFO - Found BibTeX data source '../Literatur/Literatur.bib'
+[182] Utils.pm:164> WARN - month field '16 3' in entry 'EP09' is not an integer - this will probably not sort properly.
+[196] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[197] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[197] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[197] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[200] bbl.pm:608> INFO - Writing 'Master.bbl' with encoding 'UTF-8'
+[201] bbl.pm:712> INFO - Output to Master.bbl
+[202] Biber.pm:109> INFO - WARNINGS: 1

@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1498654896 "Master.tex" "build/Master.pdf" "Master" 1498654896
+  "/net/sw/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "/net/sw/texlive/2016/texmf-dist/tex/latex/base/article.cls" 1459635588 19821 310da678527a7dfe2a02c88af38079b7 ""
+  "/net/sw/texlive/2016/texmf-dist/tex/latex/base/size10.clo" 1459635588 8292 e897c12e1e886ce77fe26afc5d470886 ""
+  "/net/sw/texlive/2016/texmf-var/web2c/luatex/lualatex.fmt" 1483451908 1245896 c55e38a6df36e2783093d43696424ae8 ""
+  "Master.tex" 1498653104 476 44e3762ef916b19579d0700b7def1445 ""
+  "build/Master.aux" 1498654896 8 a94a2480d3289e625eea47cd1b285758 ""
+  (generated)
+  "build/Master.log"
+  "build/Master.pdf"

@@ -1,0 +1,56 @@
+\section{Husimi equation}
+To compare quantum mechanical states with classical trajectories or phase space points, the Husimi projection 
+\begin{equation}
+  Q(\alpha, z) = \frac{2j + 1}{\pi^2 \left(1 + |z|^2\right)^2} \braket{\alpha, z|\rho|\alpha,z}
+\end{equation}
+is a suitable way.
+Here $\rho$ is the density matrix, in case of a pure state it is $\rho = \ket{\Psi}\bra{\Psi}$.
+This projection basically projects onto a coherent product state, thus giving the closest possible analogon to a classical propability density.
+The variables $\alpha$ and $z$ are each complex variables, and thus represent two phase space coordinates each.
+Thus the Husimi projection is fourdimensional and unsuitable to directly represent the quantum mechanical state (in picture), but it can still be studied regarding fundamental properties.
+Especially the time evolution of the Husimi projection yields notable features.
+Starting with the von Neumann equation for the time evolution of an arbitrary density matrix a differential equation for the time evolution of the Husimi projection can be derived.
+Straightforward insertion of the von Neumann equation $\dot{rho} = -\frac{i}{\hbar} \left[H,\rho\right]$ into the definition of the Husimi projection gives 
+\begin{equation}
+  \dot{Q} (\alpha, z) = -\frac{i}{\hbar} \frac{2j+1}{\pi^2 \left(1 + |z|^2\right)^2} \braket{\alpha, z|\left[H,\rho\right]|\alpha,z}~~.
+\end{equation}
+This can be rewritten as
+\begin{equation}
+  \dot Q(\alpha, z) = \frac{i (2j + 1)}{\hbar \pi^2 \left(1 + |z|^2\right)^2} \Tr\left(\rho \left[H,\ket{\alpha,z}\bra{\alpha,z}\right] \right)~~.\label{eq:Qdot}
+\end{equation}
+Furthermore we can avoid the commutator by using $\Tr\left(\rho \left[H, \ket{\alpha,z}\bra{\alpha,z} \right]\right)  = \Tr \left( \rho H \ket{\alpha,z}\bra{\alpha,z} \right) - c.c.$.
+
+Take as an initial state a product coherent state, so that $\rho = \ket{\alpha', z'}\bra{\alpha', z'}$.
+In order to calculate a differential eqation for $Q(\alpha, z)$ one must now calculate the trace in equation \eqref{eq:Qdot} and express occuring operators as derivations concerning $\alpha$ and $z$.
+These relations like
+\begin{equation}
+  a^\dagger \ket{\alpha}\bra{\alpha} = \left(\partial_\alpha + \alpha^*\right)\ket{\alpha}\bra{\alpha}
+\end{equation}
+and
+\begin{equation}
+ J_+ \ket{z}\bra{z} = \left( -z^2 \partial_z + 2j\frac{z}{1+|z|^2}\right)\ket z \bra z
+\end{equation}
+can be calculated straightforward\textcolor{red}{expamples of which might be given in the appendix}.
+Deviations concerning complex variables shall be defined as
+\begin{equation}
+  \frac{\partial f}{\partial \alpha} = \frac{1}{2}\left( \frac{\partial f}{\alpha_r} - i \frac{\partial f}{\alpha i}\right)
+\end{equation}
+and 
+\begin{equation}
+  \frac{\partial f}{\partial \alpha^*} = \frac{1}{2}\left( \frac{\partial f}{\alpha_r} + i \frac{\partial f}{\alpha i}\right)
+\end{equation}
+where $\alpha_r$ is the real and $\alpha_i$ the imaginary part of $\alpha$.
+Thereby $\partial_\alpha \alpha =\ partial_\alpha^* \alpha^* = 1$ and $\partial_\alpha^* \alpha = \partial_\alpha \alpha^* = 0$, thus a complex variable and its complex conjugate can be considered independent variables concerning deviations.
+With this the general strategy in calculating the differential equation is to substitute operators in the Hamiltonian by derivations, which are independent of the trace, and identify 
+\begin{equation}
+  \frac{2j + 1}{\pi^2 \left(1 + |z|^2\right)^2} \Tr \left[ \rho \ket{\alpha,z}\bra{\alpha,z} \right] = Q(\alpha, z)
+\end{equation}
+which uses $\ket{\alpha,z}\bra{\alpha,z} = \ket{\alpha,z}\bra{\alpha,z}\ket{\alpha,z}\bra{\alpha,z}$ and cyclical permutation under the trace.
+\textcolor{red}{Details on the calculation can be found in the Appendix} The resulting differential equation is
+\begin{align}
+  \dot Q(\alpha,z) &= \Bigg[i\partial_z \left(-\omega_0\cos\alpha z + \frac{g}{\sqrt{j}}\left( (\cos\delta\alpha^* + \sin\delta\alpha)-(\cos\delta\alpha + \sin\delta\alpha^*)z^2\right) + \frac{\omega_0\sin\alpha}{2} (1-z^2)\right)\nonumber \\
+  &~~~~~+ i\partial_\alpha \left( \omega \alpha + 2 \frac{g}{\sqrt{j}} \frac{\cos\delta z^* + \sin\delta z}{1+|z|^2} (j+1) \right)\nonumber\\
+  &~~~~~+ i \partial_z \partial_\alpha \frac{g}{\sqrt{j}} \left(\cos\delta - \sin\delta z^2\right)\Bigg] Q (\alpha,z) + c.c.~~.
+\end{align}
+While the differential equation itself is not directly used to calculate the time evolution, we can identify drifting and diffusive terms, that influence the Husimi projection in different ways.
+The drifting terms, the terms with single derivations, move the (initial) gaussian package in the complex $\alpha-z$ plain, while the diffusive term, with two derivations stretches the package and creates the quantum mechanical uncertainty.

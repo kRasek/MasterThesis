@@ -1,0 +1,58 @@
+\subsection{Coherent States}\label{ch:CoherentStates}
+A basic concept of many classical-limit-analysis are coherent states.
+They are states that posses minimum uncertainty regarding a given measure, for the bosonic part that is $\Delta q \Delta p$, with the operator uncertainty $\Delta A = \sqrt{\braket{A^2} - \braket{A}^2}$.
+For the spin the measure is $\Delta J_\parallel$, where $J_\parallel$ is a spin vector of length $j$ at which the uncertainty in smallest.
+I do not think I have to give all the calculations here, I just want to show the basic properties of the coherent states.
+The bosonic coherent states are
+\begin{equation}
+	\ket{\alpha} = e^{-\frac{|\alpha|^2}{2}} e^{\alpha \hat a^\dagger}\ket{0}~~,
+\end{equation}
+where $\ket{0}$ is the vacuum state, $\hat a^\dagger$ is the creation operator and $\alpha$ is some complex parameter. 
+It can be easily calculated, that the uncertainty $\Delta q \Delta p$ for these state is $1/2$ for any $\alpha$.
+Coherent states are normalized but not orthogonal with the finite overlap
+\begin{equation}
+	\braket{\alpha| \alpha'} = e^{-|\alpha - \alpha'|^2} \textcolor{red}{or something like that, remove if not needed}~~.
+\end{equation}
+The most important property of the coherent state is the defining equation
+\begin{equation}
+	\hat{a} \ket{\alpha} = \alpha \ket{\alpha}
+\end{equation}
+from which follow 
+\begin{equation}
+	\bra{\alpha} q \ket{\alpha} = \sqrt{2} Re(\alpha) ~~~\text{and} ~~~ 	\bra{\alpha} p \ket{\alpha} =  \sqrt{2} Im(\alpha)~~,
+\end{equation}
+so choosing $\alpha = \sqrt{\frac{j}{2}}(Q + i P)$ creates a states that best resembles a classical phase space point, in terms of small uncertainty and well known expectation values.
+The factor $\sqrt{j}$ here is due to proper scaling in the classical limit, since the squares of $\hat p$ and $\hat q$ should scale as $j$.
+Similar states exist for the spins.
+Since the Hilbertspace of the spin is finite, it is impossible to find an eigenstate to the lowering operator $\hat J_-$, but one can find states that resemble the other properties of the bosonic coherent state, the minimum uncertainty - in this case along any axis of spin orientation - and well defined expectation values for all three spin components.
+That way we get a state that best resembles a classical angular monentum oriented in some direction, which will be defined by the two angles $\theta$ and $\phi$.
+The state to achieve this is
+\begin{equation}
+	\ket{z} = \frac{1}{\left( 1 + |z|^2 \right)^j} \, e^{z \hat J_-} \ket{j}~~, \label{eq:coherentState}
+\end{equation}
+where $\ket{j}$ is the eigenstate of $\hat J_z$ with maximum quantum number and $z$ is some complex parameter.
+While the calculation is a bit more tedious than for the bosonic states, it can be shown that minimum uncertainty along some axis of spin orientation is zero.
+For this \textcolor{red}{we add some details about the calculation}.
+Choosing $z = \tan\theta e^{i\phi}$, the expectation values of the coherent state are
+\begin{equation}
+	\left(
+	\begin{array}{c}
+	\braket{\hat J_x}\\
+	\braket{\hat J_y}\\
+	\braket{\hat J_z}\\
+	\end{array}
+	\right) 
+	= j
+	\left(
+	\begin{array}{c}
+	\sin (\theta) \sin (\phi)\\
+	\sin (\theta) \cos(\phi)\\
+	\cos(\theta)\\
+	\end{array}
+	\right)
+\end{equation}
+
+Since the coherent states have well defined expectation values of the classical coordinates/observables and minimum uncertainty regarding these values, they are used, whenever a quantum version of a phase space point is needed.
+Also, since the uncertainty is constant and zero respectively, and all expectation values scale like $j$ or $\sqrt{j}$, the relative uncertainties vanish  in the limit of large $j$. 
+
+ 

@@ -1,0 +1,47 @@
+\section{Basics}
+The Standard Dicke hamiltonian reads
+\begin{equation}
+ H=\hbar \left[ \omega_0 \cos\alpha J_z + \omega a^\dagger a + \frac{g}{\sqrt{j}} J_x (a^\dagger + a) \right]~~.
+\end{equation}
+It describes a single bosonic mode of frequency $\omega$ with creation and annihilation operators $a^\dagger$ and $a$, and a spin length $j$.
+The spin operators $ J_i$ follow the standard spin algebra $[J_k,J_l] = i \sum\limits_m \epsilon_{klm} J_m$. 
+For small $j$, these operators may describe a single atom or molecule, for larger $j$ it can describe an ensemble of $N$ spin $\frac{1}{2}$ paricles of which only the subspace of maximum total spin $j = \frac{N}{2}$ is concidered.
+This assumption is justified, because the ground state of the Spin ensemble, disregarding the coupling, is in this subspace and no operators that change the total spinare present.
+
+
+By rewriting the Spin operators $J_x$ and $J_y$ in spin rising and lowering operators $J_\pm = J_x \pm i J_y$, one can identify resonant and antiresonant terms in the coupling.
+The resonant terms $a J_+$ and $a^\dagger J_-$ conserve the number of excitations $N_\text{exc} = a^\dagger a + J_z + j$ in the system.
+The antiresonant terms $a J_-$ and $a^\dagger J_+$ do not. 
+Thereby it is an often used and justified method to neglect the antiresonant terms of the coupling - the rotating wave approximation [?].
+Not only does the existence of a second constant of motion beside the energy have significant influence on the dynamics of the system, but the breakdown of the Hilbertspace into infinitely many, independent subspaces of dimension $2j+1$, makes the numerical handling of the problem a lot easier.
+Nonetheless there are many situations in which the rotating wave approximation is not applicable[?].
+To study the influence of this approximation we will consider a generalized form of the Standard Dicke Hamiltonian by using the angle $\delta$ to set the ratio of resonant and antiresonant terms.
+The coupling term then reads $\frac{g}{\sqrt{j}}\left( \cos(\delta) (aJ_+ + a^\dagger J_-) +\sin(\delta) (a^\dagger J_+ +a J_-) \right)$, which can shift from rotating wave approximation $\delta = 0$ to the Standard coupling $\delta = \pi/4$ to a purely antiresonant coupling $\delta = \pi/2$.
+Neglecting the rotating wave approximation, what remains is the parity symmetry $P = \exp(i\pi N_\text{exc})$, which can be interpreted as whether the number of excitations is even or odd.
+One can see, that the antiresonant terms only ever create or annihilate two excitations, so the parity remains conserved.
+Whether this has a significant influence on the dynamics of the system is subject of this thesis, but one way or the other the Hilbert space separates into two independent subspaces.
+Their dimension is infinite but after applying a suitable truncation of the bosonic Hilbertspace, exploiting the parity can lead to significantly less numeric efforts.
+A second geralization is now applied in order to break the parity.
+For this a term that creates or annihilates one excitation is needed.
+We use a second angle $\alpha$ to shift the constant magnetic field, that splits the energy levels of the Spin from the $z$ axis into the $x-z$ plain, so that the generalized Dicke Hamiltonian considered in this thesis reads
+\begin{equation}
+ H=\hbar \left[ \omega_0 (\cos\alpha J_z + \sin \alpha J_x )+\omega a^\dagger a + \frac{g}{\sqrt{j}}\left( \cos(\delta) (aJ_+ + a^\dagger J_-) +\sin(\delta) (a^\dagger J_+ +a J_-) \right) \right]~~. \label{eq:H}
+\end{equation}
+
+% Different Limits
+One of the important qualties of the Dicke model is, that it has a well defined classical limit[?].
+There are different limits to be considered. 
+The thermodynamic limit describes the Dicke model in the background of $N$ particles in, e.g. an optical cavity, the limit being $N\rightarrow \infty$ as is the usual thermodynamic limit in solid state or statistical physics[?].
+It is to be noted, that the system remains quantum mechanical.
+The classical limit yields very similar results, but applies a limit, where the Spin length becomes infinite, resulting in infinitely many energy levels and possible orientations of the spin -as a classical angular momentum- , while $\hbar$ is sent to zero in a way, that $\hbar j = s$ remains constant.
+This limit is usually referred to as the classical limit, sometimes called the classical spin limit, because it is also possible to apply a limit, that makes the oscillator classical, the classical oscillator limit [? Fehske et al und noch jemand, vielleicht?].
+Here the frequency, i.e. the energy spacing, of the oscillator is sent to zero, so that the oscillator can be described by a classical continuous harmonic oscillator, while the Spin remains quantum mechanical.
+This limit will only briefly be covered in this thesis (if at all, as of 26.06.), because the classical spin limit yields enough classical and, more importantly, analytically approachable results.
+It is worth noting, that even in the classical spin limit, henceforth classical limit, the bosonic part of the Hamiltonian becomes a classical oscillator, since the energy spacing vanishes as $\hbar$ approaches zero.
+
+%special case \alpha = pi/2
+A simple special case is the combination of standard Dicke coupling, i.e. $\delta = \pi/4$, and $\alpha = \pi/2$. That way the hamiltonian only includes the $x$ component of the spin and is exactly solvable for any spin length and parameter choice.
+That way the spin operator $J-x$ commutes with the hamiltonian and the spin part of any energy eigenstate is an eingenstate of $J_x$. 
+The oscillator part then is only a shifted oscillator, where the offset depends of the spin quantum number.
+
+

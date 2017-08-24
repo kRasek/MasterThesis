@@ -1,0 +1,183 @@
+\section{Klassischer Limes}
+Zunächst soll ein klassisches System bestimmt werden, das dem quantenmechanischem Modell im Limes $j\rightarrow \infty, \hbar \rightarrow 0$ entspricht.
+Dies ist ein System bestehend aus einem Drehimpuls der Länge $s = \hbar\sqrt{j(j+1)} \approx \hbar j$, die im Grenzwert konstant bleiben soll, und einem Oszillator mit Orts- und Impulskoordinaten $Q$ und $P$.
+\subsection{Hamiltonfunktion}
+Zur Bestimmung einer klassischen Hamiltonfunktion werden die üblichen Ersetzungen angewandt
+\begin{align*}
+  J_{\pm} &= J_x \pm i J_y~~~~~~~~~~~ a = \frac{1}{\sqrt{2}} (Q+iP)~~~~~~~ a^\dagger = \frac{1}{\sqrt{2}} (Q-iP)~~.\\
+\end{align*}
+Um dies auf dimensionsbehaftete Größen zurückzuführen, werden folgende Ersetzungen gemacht:
+\begin{align*}
+  L_i &= \hbar J_i,~~~~~  q=x_0 Q,~~~~~p= \frac{\hbar}{x_0} P\\
+  \hbar \omega a^\dagger a &=\hbar \omega \frac{1}{2} (P^2+Q^2-1) = \frac{1}{2} m \omega^2 q^2 + \frac{1}{2m}p^2 -\cancelto{\text{0 im Limes}}{\hbar\omega/2}\\
+\end{align*}
+mit $x_0  =  \sqrt{\frac{\hbar}{m\omega}}$.
+ Da $x_0$ für $\hbar\rightarrow 0$ verschwindet, verwende \linebreak  $\tilde{x} = \sqrt{\frac{s}{m\omega}} = \sqrt{j} x_0$ welches im Limes konstant bleibt.
+Damit ist
+\begin{align*}
+  \frac{\hbar}{\sqrt{j}} a J_+ &= \frac{1}{\sqrt{2}}(\frac{q}{\tilde{x}} + i \frac{\tilde{x}}{s} p) (L_x + i L_y)\\
+  \frac{\hbar}{\sqrt{j}} a J_- &=\frac{1}{\sqrt{2}}(\frac{q}{\tilde{x}} + i \frac{\tilde{x}}{s} p)(L_x - i L_y)\\
+  \frac{\hbar}{\sqrt{j}} a^\dagger J_- &=\frac{1}{\sqrt{2}}(\frac{q}{\tilde{x}} - i \frac{\tilde{x}}{s} p)(L_x - i L_y)\\
+  \frac{\hbar}{\sqrt{j}} a^\dagger J_+ &=\frac{1}{\sqrt{2}}(\frac{q}{\tilde{x}} - i \frac{\tilde{x}}{s} p)(L_x + i L_y)~~.\\
+\end{align*}
+Im klassischen Limes $(\langle ab\rangle = \langle a\rangle \langle b\rangle)$ folgt die Hamiltonfunktion
+\begin{align*}
+ H(\vec{L},p,q) =& \omega_0 (\cos \alpha L_z + \sin\alpha L_x)+ \frac{1}{2} m \omega^2 q^2 + \frac{1}{2m}p^2 \\
+&+ \sqrt{2}g\left( \cos(\delta) ( L_x \frac{q}{\tilde{x}} - L_y \frac{\tilde{x}}{s} p) 
++ \sin(\delta)( L_x \frac{q}{\tilde{x}} + L_y \frac{\tilde{x}}{s} p)\right)
+\end{align*}
+Zurück zu klassischen dimensionslosen Größen: $l_i = \frac{L_i}{s}$, $Q=\frac{q}{\tilde{x}}$, $P = \frac{\tilde{x}}{s}p$, $h = H/(s\omega_0)$. Beachte hierbei einen Skalierungsfaktor $\frac{1}{\sqrt{j}}$ gegenüber den dimensionslosen Operatoren die durch $a$ und $a^\dagger$ definiert sind.
+\begin{align}
+ h(\vec{l},P,Q) &= \cos\alpha l_z + \sin \alpha l_x+ \frac{1}{2} \underbrace{\frac{\omega}{\omega_0}}_{\nu} (P^2 + Q^2) 
+  + \underbrace{\sqrt{2} \frac{g}{\omega_0}}_{g_0} \left( \cos\delta (l_x Q - l_y P) + \sin\delta (l_x Q+l_y P)\right) \nonumber\\ 
+  &= \cos\alpha l_z + \sin \alpha l_x + \frac12 \nu (P^2+Q^2) + g_0\left((\sin\delta + \cos\delta)l_x Q + (\sin\delta -\cos\delta)l_y P \right) \label{Hamiltonian}
+\end{align}
+In der üblichen Notation ist
+\begin{align}
+  g_0 = \gamma\sqrt{\frac{\nu}{2}}~~,
+\end{align}
+sodass im Standard-Dicke-Modell ($\delta = \pi/4,\alpha = 0$) der Phasenübergang bei $\gamma = 1$ auftritt.  
+\subsection{Energieminimum}
+Energieminimum mit Nebenbedingung $l_x^2 + l_y^2+l_z^2 = 1$. Minimiere also 
+\begin{equation*}
+F(\vec{l}, P,Q, \lambda) = h(\vec{l}, P,Q)+\lambda (l_x^2 + l_y^2+l_z^2 - 1) ~~.
+\end{equation*}
+Aus $\nabla F = 0$ ergeben sich die Gleichungen:
+\begin{align}
+  0 &= \nu P + g_0 l_y (\sin \delta - \cos \delta)\label{P}\\
+  0 &= \nu Q + g_0 l_x (\sin \delta + \cos \delta)\label{Q}\\
+  0 &= g_0 Q (\sin \delta + \cos\delta) + 2\lambda l_x + \sin\alpha\label{lx}\\
+  0 &= g_0 P (\sin \delta - \cos\delta) + 2\lambda l_y\label{ly}\\
+  0 &= \cos\alpha + 2\lambda l_z\label{lz}\\
+  0 &= l_x^2 + l_y^2 + l_z^2 -1 \label{lambda}
+\end{align}
+Multipliziere \eqref{P} mit $P$ und \eqref{ly} mit $l_y$ und eliminiere die Sinus- und Cosinus-Anteile um auf die Gleichungen
+\begin{align}
+ 2\lambda l_y^2 = \nu P^2 \label{P^2}\\
+2\lambda l_x^2 + \sin\alpha l_x  = \nu Q^2 \label{Q^2}
+\end{align}
+zu kommen. Die zweite folgt analog aus den Gleichungen \eqref{Q} und \eqref{lx}. \\
+
+
+\subsubsection{ Mit Parität: $\sin\alpha = 0$}
+Zunächst für den Fall mit erhaltener Parität:\\
+\eqref{P} nach $P$ umformen in \eqref{ly}, und \eqref{Q} nach $Q$ umformen in \eqref{lx} liefern
+\begin{align*}
+  2\lambda l_y = \frac{g_0^2}{\nu}(\sin\delta - \cos\delta)^2 l_y\\
+  2\lambda l_x = \frac{g_0^2}{\nu}(\sin\delta + \cos\delta)^2 l_x~~.
+\end{align*}
+Damit beides erfüllt werden kann, muss $l_x$ oder $l_y$ (oder beide) $0$ sein.
+
+Fallunterscheidung:
+\begin{itemize}
+ \item $l_x=l_y=0$:\\
+ damit $l_z=\pm1$ , $P=Q=0$,  $\lambda = \mp \frac{1}{2}$, $h=\pm 1$
+\item $l_x=0, \lambda = \frac{g_0^2}{2\nu}(\sin\delta - \cos\delta)^2 =:\lambda_- = \frac{\gamma^2}{4}(\sin\delta - \cos\delta)^2$:\\
+Aus \eqref{lz} folgt $l_z = -\frac{1}{2\lambda}$, damit $l_y = \pm \sqrt{1-(\frac{1}{2\lambda})^2}$\\
+Dann folgt aus \eqref{P} und \eqref{Q} $Q=0$ und $P=\mp \frac{g_0}{\nu}(\sin\delta - \cos\delta) \sqrt{1-(\frac{1}{2\lambda})^2}$.
+Die Energie ist dann
+\begin{align*}
+  h &= -\frac{1}{2\lambda}  + \frac{1}{2} \nu \frac{2\lambda}{\nu}\left(1-(\frac{1}{2\lambda})^2\right) 
+- \overbrace{\frac{g_0^2}{\nu} (\sin\delta-\cos\delta)^2}^{ = 2\lambda}\left(1-(\frac{1}{2\lambda})^2\right)\\ 
+  &= -\frac{1}{2\lambda} + \lambda -\frac{1}{4\lambda} - (2\lambda -\frac{1}{2\lambda})=-\lambda -\frac{1}{4\lambda}
+\end{align*}
+\item $l_y=0, \lambda = \frac{g_0^2}{2\nu}(\sin\delta + \cos\delta)^2 =:\lambda_+$:\\
+Aus \eqref{lz} folgt $l_z = -\frac{1}{2\lambda}$, damit $l_x = \pm \sqrt{1-(\frac{1}{2\lambda})^2}$
+Dann folgt aus \eqref{P} und \eqref{Q} $P=0$ und $Q=\mp \frac{g_0}{\nu}(\sin\delta + \cos\delta)\sqrt{1-(\frac{1}{2\lambda})^2}$.
+Die Energie ist dann
+\begin{align*}
+  h &= -\frac{1}{2\lambda}  + \frac{1}{2} \nu \frac{2\lambda}{\nu}\left(1-(\frac{1}{2\lambda})^2\right) 
+- \overbrace{\frac{g_0^2}{\nu} (\sin\delta+\cos\delta)^2 }^{2\lambda}\left(1-(\frac{1}{2\lambda})^2\right)\\ 
+  &= -\frac{1}{2\lambda} + \lambda -\frac{1}{4\lambda} - (2\lambda -\frac{1}{2\lambda})=-\lambda -\frac{1}{4\lambda}
+\end{align*}
+\end{itemize}
+Für $\lambda \geq 0$ sind die letzteren Energien kleiner als $-1$. 
+Beachte auch die Einschränkung $|\lambda|\geq 1/2$ (wegen $|l_z|\leq 1$) und $\lambda > 0$ (da $\nu$ positiv).\\
+Das Energieminimum wird also erreicht entweder bei \\
+$P=Q=l_x=l_y=0, l_z = -1 = h$, bei 
+\begin{align*}
+  l_z & =-\frac{1}{2\lambda_+},~~~~~l_{x} &= \pm \sqrt{1-(\frac{1}{2\lambda_+})^2},~~~~~l_{y} &= 0 ,~~~~~ P&=0,~~~~~Q=\mp \frac{g_0}{\nu}(\sin\delta + \cos\delta) \sqrt{1-(\frac{1}{2\lambda_+})^2} 
+\end{align*}
+oder bei
+\begin{align*}
+  l_z & =-\frac{1}{2\lambda_-},~~~~~l_{y} &= \pm \sqrt{1-(\frac{1}{2\lambda_-})^2},~~~~~l_{x} &= 0, ~~~~~ Q&=0,~~~~~P= \mp \frac{g_0}{\nu}(\sin\delta - \cos\delta) \sqrt{1-(\frac{1}{2\lambda_-})^2} 
+\end{align*}
+Wenn $\lambda_\pm>\frac12$ wird das absolute Minimum in einem nichttrivialen Fall erreicht.
+Da $-\lambda -\frac{1}{4\lambda}$ für $\lambda>\frac{1}{2}$ streng monoton fallend ist, wird der Fall mit dem größeren $\lambda$ die geringere Energie aufweisen.
+Es gilt 
+\begin{equation}
+ \lambda_+ > \lambda_- \Leftrightarrow \sin(2\delta)>0
+\end{equation}
+
+
+Für das Standard-Dicke-Modell ($\delta = \pi/4$) gilt
+\begin{equation}
+ \lambda_+>\frac{1}{2} \Leftrightarrow \gamma>1~,
+\end{equation}
+der Phasenübergang tritt also bei $\gamma_c=1$ auf.
+Im Allgemeinen ist Fall ist die Bedingnung
+\begin{equation}
+ \lambda_\pm > \frac{1}{2} \Leftrightarrow \gamma>\frac{\sqrt{2}}{|\sin\delta \pm\cos\delta|},
+\end{equation}
+
+
+\subsubsection{ Ohne Parität: $\sin\alpha \neq 0$}
+Es bleiben die Gleichungen:
+\begin{align}
+  2\lambda l_y^2 &= \nu P^2 \nonumber\\
+  2\lambda l_x^2 + \sin\alpha l_x  &= \nu Q^2\nonumber\\ 
+  2\lambda l_x + \sin\alpha&= \frac{g_0^2}{\nu}(\sin\delta + \cos\delta)^2 l_x\label{Gleichung fuer lx}\\
+  2\lambda l_y &= \frac{g_0^2}{\nu}(\sin\delta - \cos\delta)^2 l_y\nonumber\\
+\end{align}
+Die letzte liefert wieder die Fallunterscheidung $l_y =$ oder $\neq 0$. Außerdem gilt weiterhin $|\vec{l}|=1, l_z = -\cos\alpha/(2\lambda)$.
+\\ 
+\\
+
+Fall $l_y=0$:\\
+Dann ist auch $P=0$. $l_x = \pm \sqrt{1-\frac{\cos^2\alpha}{4\lambda^2}}$. $\lambda$ bestimmt sich dann aus der dritten Gleichung:
+\begin{equation*}
+  2\lambda \sqrt{1-\frac{\cos^2\alpha}{4\lambda^2}} \mp \sin\alpha = \frac{g_0^2}{\nu} \sqrt{1-\frac{\cos^2\alpha}{4\lambda^2}} (\sin\delta + \cos\delta)^2=: 2\sqrt{1-\frac{\cos^2\alpha}{4\lambda^2}}~~\lambda_+
+\end{equation*}
+Das lässt sich umformen zu einem Polynom vierten Grades in $\lambda$
+\begin{equation*}
+  \lambda^4-2\lambda_+ \lambda^3 +(\lambda_+^2-\frac14)\lambda^2 + \frac{\cos^2\alpha}{2}\lambda_+ \lambda -\frac{\cos^2\alpha}{4}\lambda_+^2=0
+\end{equation*}
+Beachte, dass sich für $\sin\alpha = 0$, die Fallunterscheidung $\lambda=\pm1/2$ oder $\lambda = \lambda_+$ ergibt, was zu den gleichen Ergebnissen wie oben führt.
+\\
+
+Fall $l_y \neq 0$:
+\begin{align*}
+  \lambda &= \frac {g_0^2}{2\nu}(\sin\delta -\cos\delta)^2 = \frac {g_0^2}{2\nu}(1-\sin(2\delta))=:\lambda_0(1-\sin(2\delta)) = \lambda_-\\
+  l_x &= -\sin\alpha \left( 2\lambda - \frac{g_0^2}{\nu}(\sin\delta + \cos\delta)^2 \right)^{-1} = -\sin\alpha \frac{\nu}{g_0^2} \left( (\sin\delta - \cos\delta)^2 - (\sin\delta + \cos\delta)^2\right)^{-1}\\
+  &= \sin\alpha \frac{\nu}{g_0^2} \frac{1}{4\sin\delta\cos\delta} = \sin\alpha \frac{\nu}{ 2 g_0^2} \frac{1}{\sin(2\delta)} =  \frac{\sin\alpha}{4} \frac{1}{\lambda_0 -\lambda}\\
+  l_y &= \pm \sqrt{1 - \frac{\cos^2\alpha}{4\lambda^2} - \frac{\sin^2\alpha}{16} \frac{1}{(\lambda_0-\lambda)^2}}\\
+\end{align*}
+Verwende die Gleichungen \eqref{P} bis \eqref{lambda} um die Minimalenergie abhängig von $\lambda$ auszurechnen. Ersetze mit \eqref{P} und \eqref{Q} die $\delta$-abhängigen Terme in \eqref{Hamiltonian}:
+\begin{align*}
+ h_{min}  = \cos\alpha l_z + \sin\alpha l_x - \frac{\nu}{2}(P^2+Q^2)
+\end{align*}
+Weiter mit \eqref{P^2} und \eqref{Q^2} 
+\begin{align*}
+  h_{min} &= -\frac{\cos^2\alpha}{2\lambda} + \sin\alpha l_x - (\underbrace{\lambda l_x^2 + \lambda l_y^2}_{\lambda(1-l_z^2)} + \frac{\sin\alpha}{2} l_x)\\
+  &= - \frac{\cos^2\alpha}{4\lambda} + \frac{\sin\alpha}{2} l_x - \lambda 
+\end{align*}
+und mit Gleichung \eqref{Gleichung fuer lx} ergibt sich
+\begin{align}
+  h_{min} = -\frac{\cos^2\alpha}{4\lambda} + \frac{\sin^2\alpha}{4(\lambda_+ - \lambda)} - \lambda~~.
+\end{align}
+\subsection{Bewegungsgleichungen}
+$P,Q$ aus hamiltonschen Bewegungsgleichungen:
+\begin{align*}
+  \dot{P} &= - \frac{\partial h}{\partial Q} = - \nu Q - g_0 l_x (\sin\delta + \cos\delta)\\
+  \dot{Q} &= + \frac{\partial h}{\partial P} = + \nu P + g_0 l_y (\sin\delta - \cos\delta) 
+\end{align*}
+Da die $l_i$ keine kanonischen Variablen sind, müssen die DGLs z.B. aus dem Ehrenfest-Theorem hergeleitet werden, mit Hamiltonian \eqref{Hamiltonian}, wenn man sich alles wieder als Operatoren denkt:
+\begin{equation*}
+  \frac{d}{dt}\langle l_j \rangle = i \langle[h,l_j]\rangle + \cancelto{0}{\langle\frac{\partial l_j}{\partial t}\rangle}
+\end{equation*}
+Damit ergibt sich
+\begin{align*}
+  \dot{l_x} &= + g_0 (\sin\delta - \cos\delta) P l_z - l_y\\
+  \dot{l_y} &= - g_0 (\sin\delta + \cos\delta) Q l_z  + l_x -\sin\alpha l_z\\
+  \dot{l_z} &= + g_0 \left[ (\sin\delta + \cos\delta) Q l_y - (\sin\delta - \cos\delta)P l_x\right] + \sin\alpha l_y~~.
+\end{align*}

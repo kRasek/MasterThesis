@@ -1,0 +1,18 @@
+\subsection{Properties of the Spectrum and Eigenstates}
+The energy spectrum of a quantum system reveals much of its properties.
+It can also give information of chaotic or regular dynamics [?] as will be shown in the following section.
+One of the most prominent features of quantum chaos is avoided crossing, i.e. no energy degeneracies.
+This roots from the structure of the spectrum and eigenstates of the system.
+If there are certain conserved quantities, be it an observable like the number of exciations as in the Tavis-Cummings model, or a symmetry like the parity, as in the Standard Dicke model, the spectrum is separated into different subsets, which are independet of each other.
+In such a case degeneracies between different subsets are allowed, because of their independence, in other words the quantum states differ in some quantum number. 
+If no such conserved quantity exists, the systems eigenvalues will avoid degeneracies, because ---?
+The mapping of nontrivial (i.e. not just counting them) quantum numbers to eigenvalues is a key aspect of integrable dynamics, the inability is a sign of nonintegrability.
+The mechanism of avoided crossing is especially usefull, since it can be observed whether or not an underlying conserved quantity is known or not. 
+If degenerate or even nearly degenerate states exist, one can assume, that the is a conserved quantity and the system may follow regular dynamics.
+If on the other hand there are no arbitrarily small energy differences, there seams to be no other invariant beside the energy, and the system may behave chaotically, at least in the classical limit.
+In classical mechanics a criterion for regular or integrable dynamics is the number of invariants in involution.
+Every invariant restricts the phase space accesible to any given initial values to a torus, so if there are enough invariants to be found, the dynamics become regular or integrable.
+It is important to notice here, that according to Noethers Theorem [? source necessary?] only continuous symmetries create invariants. 
+Thus the parity, although spliting the Hilbert space, does not necessary have a great influence on the dynamics, at least in or close to the classical limit.
+What remains to be studied is whether or how breaking the parity influences the dynamics in case of small spins, because the derived criterion of conserved quantities can not necessarily be converted to the small spin case.
+

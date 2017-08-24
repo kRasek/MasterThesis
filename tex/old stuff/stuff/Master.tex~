@@ -1,0 +1,27 @@
+\documentclass[a4paper,10pt]{article}
+
+\include{tex/head}
+
+\title{The generalized Dicke model with broken parity symmetry}
+\author{Kristopher Rasek}
+
+\bibliography{../Literatur/Literatur}
+
+\begin{document}
+
+\maketitle
+
+%\include{tex/abstract.tex}
+\include{tex/introduction}
+\include{tex/basics}
+\include{tex/spectrum}
+\include{tex/timeevolution}
+%\include{tex/classLim.tex}
+%\include{tex/qMech.tex}
+
+
+
+\nocite{*} 
+%\bibliographystyle{plain}
+\printbibliography
+\end{document}

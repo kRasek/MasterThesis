@@ -1,0 +1,73 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{AP84}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8ba8c6b2dc834950170252b63f0d0340}{%
+           family={{Asher Peres}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ba8c6b2dc834950170252b63f0d0340}
+      \strng{fullhash}{8ba8c6b2dc834950170252b63f0d0340}
+      \strng{authornamehash}{8ba8c6b2dc834950170252b63f0d0340}
+      \strng{authorfullhash}{8ba8c6b2dc834950170252b63f0d0340}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{10}
+      \field{note}{53\_1711.pdf}
+      \field{number}{18}
+      \field{title}{New {C}onserved {Q}uantities and {T}est for {R}egular {S}pectra}
+      \field{volume}{53}
+      \field{year}{1984}
+      \field{pages}{1711\bibrangedash 1713}
+      \range{pages}{3}
+    \endentry
+    \entry{EP09}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bd71d6425c08f2f605979fd80ac79e3b}{%
+           family={{Eric Polizzi}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd71d6425c08f2f605979fd80ac79e3b}
+      \strng{fullhash}{bd71d6425c08f2f605979fd80ac79e3b}
+      \strng{authornamehash}{bd71d6425c08f2f605979fd80ac79e3b}
+      \strng{authorfullhash}{bd71d6425c08f2f605979fd80ac79e3b}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{16 3}
+      \field{note}{PhysRevB.79.115112.pdf}
+      \field{number}{11}
+      \field{title}{Density-matrix-based algorithm for solving eigenvalue problems}
+      \field{volume}{79}
+      \field{year}{2009}
+      \field{pages}{115112(6)}
+      \range{pages}{-1}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

@@ -1,0 +1,97 @@
+\section{Time Evolution}
+To numerically study the time evolution of a quantum system it is necessary to find an efficient way to implement the time evolution operator.
+Using the operator directly instead of expanding the initial state into the energy eigenstates is advisable, so that it is not necessary to diagonalize the full Hamiltonian.
+
+%Chebyhev expansion
+It has been shown that the Chebyshev expansion is a very efficient approach to this problem, because the resulting expansion coefficients, which are given by Bessel functions, decrease controllably for high orders, and the operator polynomials are more stable than a power expansion or other established approaches.
+Thus it is useful especially for large time steps.
+The time evolution operator is expanded in Chebyshev-polynomials and takes the form
+\begin{equation}
+  U(\delta t) = e^{-iH\delta t/\hbar} = e^{-ib\delta t/\hbar}\left[ c_0\left( \frac{a \delta t}{\hbar} \right) +2\sum\limits_{k=1}^{\infty} c_k\left(\frac{a \delta t}{\hbar}\right) T_k\left( \tilde H\right) \right]~~. \label{eq:timeevolution}
+\end{equation}
+In this equation $T_k(x)$ are the Chebyshev polynomial defined as the solutions of the Chebyshev differential equation $\left(1-x^2\right) T_n'' - x T_n' + n^2T_n= 0$ and are given by the recursive formula $T_k(x) = 2xT_{k-1}(x) - _{k-2}(x)$ with $T_0(x) = 1$ and $T_1(x) = x$.
+The expansion coefficients are given by
+\begin{equation}
+  c_k(y) = \int\limits_{-1}^{1} \frac{T_k(x) e^{-ixy}}{\pi \sqrt{1-x^2}}\text d x = (-i)^k J_k(y)~~,
+\end{equation}
+where $J_k(y)$ is the $k$th bessel function of the first kind.
+The modified hamiltonian $\tilde H$ and the parameters $a$ and $b$ need to be chosen so that 
+\begin{equation}
+  \tilde H = \frac{H-b}{a}
+\end{equation}
+yields eigenvalues in the interval $[-1,1]$.
+This condition is necessary because the Chebyshev polynomials are orthogonal and normalized only in that intervall.
+Here it is important to notice that this condition can not be fullfilled for the full hamiltonian, since there is no upper limit for the eigenvalues of the Hamiltonian, due to the bosonic mode.
+For the truncated hamiltonian, the maximum eigenvalue can readily be calculated by a power method, but since the truncated system does not represent the full Hamiltonian in the upper segment of the spectrum a suitably large truncation must be chosen for any reliable application.
+The other truncation that must be accounted for is the truncation of the series expansion in the time evolution operator in equation \eqref{eq:timeevolution}.
+Since the expansion is iterative, it is possibly to continue the expansion until the change in the state is small enough to neglect.
+Applying $T_k(\tilde H)$ to a normalized state yields a state whichs norm is $\leq 1$, thus $c_{M+1}$ provides a sufficient approximation for the truncation error, if the sum in equation $\eqref{eq:timeevolution}$ is truncated at $k = M$.
+%Truncation of the bosonic hilbert space
+As a rule of thumbs for the truncation of the bosonic Hilbert space, the coherent state can be utilized, because they form a base.
+Assuming the time evolutions roughly follows the classical trajectory, this gives a maximum value of $|\alpha|^2 = p^2 + q^2$ by which need to be included in the truncation.
+Since the coherent states with higher $\alpha$ have greater weight in the higher fock states, we can assume that if the largest value $|\alpha|^2$ that appears in the classical trajectory is well described in the truncation scheme, in the sense that the weights of the truncated fock states are neglegible, the truncation is suficcient to describe the time evolution of the system.
+
+%General goals
+Time evolution of a given initial state can used to directly determine chaotic or regular dynamics of a system. 
+It also provides insight to the still remaining, fundamental differences between classical and quantum mechanics even and especially for large spin lengths, and shows how these differences behave as a function of the spin length.
+The initial states that are most interesting for these matters, are product coherent states in both bosonic and spin part.
+These are the states that provide the most accurate approximation of classical phase space points because they show the minimum uncertainty in both parts, as well as no (initial) entanglement of spin and bosons.
+%Methods of visualization
+Since again the space we try to observe is fourdimensional, we need a way to project a state on a two dimensional surface. 
+In this section I will use the Husimi-Oscillator-projection, that projects the oscillator part of the wave function onto a twodimensional space with coordinates $p$ and $q$ using the coherent states, and traces over the spin part, given by the equation
+\begin{equation}
+ Q_\text{Osc} = \sum\limits_{m} |\braket{\alpha,m | \Psi}|^2~~, 
+\end{equation}
+where $\ket{\alpha,m}$ is a product state of a coherent Oscillator state $\ket{\alpha}$ and a $J_z$ eigenstate $\ket{m}$.
+While this projection is visual, other more quantitative measures are necessary to study the timeevolution quantitatively.
+These are the expecation values of different Observables as well as their uncertainties.
+The uncertainties can describe how the quantum mechanical system differs from the classical one in that the state spreads out over an extended area of the phase space as opposed to the classical phase space point.
+For the spin part, the choice of the uncertainty is nontrivial.
+The state $\ket{j}$, for example, which represents a spin aligned along the positive $z$ axis, has zero $J_z$ uncertainty but a finite $J_x$ or $J_y$ uncertainty.
+Similarly all spin coherent states have finite uncertainties on axes not parallel to their orientation.
+Thus a suited measure is the minimum spin uncertainty along any axis
+\begin{equation}
+  \Delta J_\parallel = \frac{1}{j^2}\min\limits_{\vec{n}} \left( \braket{J_{\vec{n}}^2} - \braket{J_{\vec{n}}^2}\right) 
+\end{equation}
+with $J_{\vec{n}} = n_x J_x + n_y J_y + n_z J_z$ and $n_x^2 + x_y^2 + n_z^2 = 1$.
+This can readily be calculated as the smallest eigenvalue of the matrix
+\begin{equation}
+   M= \frac{1}{j^2}
+  \begin{pmatrix}
+  \Delta_{xx} & \Delta_{xy} & \Delta_{xz} \\
+  \Delta_{yx} & \Delta_{yy} & \Delta_{yz} \\
+  \Delta_{zx} & \Delta_{zy} & \Delta_{zz}
+  \end{pmatrix}
+\end{equation}
+with the pair uncertainties $\Delta_{kl} = \frac{1}{2}\braket{J_k J_l + J_l J_k} - \braket{J_k}\braket{J_l}$.
+This matrix is positive-semidefinite, given that $\Delta J_\parallel \geq 0$.
+For a coherent state this matrix is 
+\begin{equation}
+   M_\text{c} = \frac{j}{2\left( 1 + |z|^2\right)^2}
+  \begin{pmatrix}
+  \left(1-z^2\right)\left(1-{z^*}^2\right)	&	i\left(z^2 - {z^*}^2\right)			&	-\left(z + z^*\right)\left(1-|z|^2\right) 	\\
+  i\left(z^2 - {z^*}^2\right)			&	\left(1 + z^2\right)\left(1+{z^*}^2\right)	&	i\left(z - z^*\right) \left( 1 - |z|^2\right)	\\
+  -\left(z + z^*\right)\left(1-|z|^2\right)	&i\left(z - z^*\right) \left( 1 - |z|^2\right)		&	4|z|^2
+  \end{pmatrix}~~.
+\end{equation}
+
+\textcolor{red}{I will leave the actual calculation to the reader, but briefly summarize the necessary steps, here or in the Appendix.}
+By straightforward insertion of the series expansion of the coherent state
+\begin{equation}
+\bra{z} J_z \ket{z} = j \frac{1 - |z|^2}{1 + |z|^2}
+\end{equation}
+and 
+\begin{equation}
+\bra{z} J_z^2 \ket{z} = j^2 \frac{1 - |z|^2}{\left(1 + |z|^2\right)^2} + 2j \frac{|z|^2}{\left(1 + |z|^2\right)^2}
+\end{equation}
+can be calculated.
+The expectation values of $J_-$ and $J_+$ can easily be found by considering $\bra{z} \partial_z \ket{z}$ and $\bra{z} \partial_{z^*} \ket{z}$ respectively. 
+For this we use  $\bra{z} \partial_z \ket{z} =  \partial_z \braket{z|z} - \partial_z\left(\bra{z}\right) \ket{z}$ and utilize, that $\partial_z z^* = 0$.
+Using $J_x =\frac{1}{2} \left(J_+ +  J_-\right)$ \textcolor{red}{check} and $J_y= \frac{1}{2i} \left(J_+ - J_-\right)$\textcolor{red}{check}, this provides all necessary single expectation values.
+The double expectation values can be calculated in a similar way, using $\bra z \partial_z^2 \ket z$, $\bra z \partial_{z^*} \ket z$ and $\bra z \partial_{z^*} \partial_z \ket z$ for $\bra z {J_-}^2 \ket z$, $\bra z J_+^2 \ket z$ and $\bra z J_+ J_- \ket z$ respectively. 
+Finally, $zJ_-\ket{z} = \left(j - J_z\right) \ket{z}$ can be used to calculate the mixed Expectation values including the $z$-component of the Spin. 
+From this $\bra z J_- J_z\ket z = j\bra z J_-\ket z - z \bra{z} J_-^2\ket z $ follows quite obviously, and $\bra z J_+ J_z \ket z$ results by simple conjugation and using the commutator $\left[ Jz,J_+\right] = J_+$.
+Since the Matrix is positive semidefinite it is sufficient to show that its determinant is zero, for $\Delta J_\parallel = 0$, which can easily be done for a $3 \times 3$-matrices.
+
+
+%results

@@ -1,0 +1,13 @@
+\section{Introduction}
+The Dicke model was first introduced by Dicke in 1957[?] to accurately describe light matter interaction on a quantum mechanical level. 
+In its simplest form it describes a quantum mechanical Spin of length $j$, a single bosonic mode as well as a coupling term.
+There is a whole group of models closely related to the Dicke model, such as the Rabi model[?] which depicts the special case of $j = \frac{1}{2}$, or the Jaynes Cummings[?] or Tavis Cummings models [?], which apply the rotating wave approximation with $j = \frac{1}{2}$ or arbitrary spin, respectively. 
+The Dicke and related models gained interest of physicists for numerous reasons and can be applied in many different fields of research, including atom physics[?], optomechanics [?] and quantum computing[?]. 
+Since it has a well defined and well understood classical limit, it is also of interest for reseaching the transition between classcal and quantum mechanics [?], especially in the context of chaos[?].
+The Dicke model also gained interest because it displays a quantum phase transition.
+Despite the discovery of the phase transition by Dicke himself in 19XX[?] it is still a subject of research interest in various fields, ranging from its recent experimental realization in a Bose Einstein Condensate or the discussion wheather the nature of the phase transition is quantum at all [?], or just an afterimage of the classical limit, where the minimum energy shows a bifurcation at a crittical coupling.
+Without disregarding the work of Someone et al. [?], I will still call it a quantum phase transition, as the majority of the scientific community.
+Many areas of parameter space of the Dicke model have been subject of study before[?-?], yet few have included a parity breaking term, as is studied in this thesis.
+It will be subject of this thesis, weather breaking the parity has any fundamental effect on the spectrum and eigenstates, and dynamical properties of the Dicke model.
+The parity breaking term is caused by an angle $\alpha$ which shifts the constant magnetic field in the $x-z$-plain away from the $z$ axis.
+Another angle is used to determine the ratio of the rotating and counterrotating terms of the coupling, making it possible to continuously shift between rotating wave approximation and the Standard Dicke model.

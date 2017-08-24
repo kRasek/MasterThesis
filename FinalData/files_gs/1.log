@@ -1,0 +1,10 @@
+Parameter file contains:
+	maximum n (fock state) that is contained in truncated Hamiltonian
+	delta
+	gamma
+	tolerance
+	alpha
+
+groundstate energy is-21.2608
+
+This job took 123.29 seconds (cpu).

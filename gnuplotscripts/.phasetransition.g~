@@ -1,0 +1,45 @@
+reset
+unset key
+N=1;
+mu=0.1;
+sigma = 0.14;
+f(x)=N*exp(-(x-mu)**2/sigma**2) + N*exp(-(x+mu)**2/sigma**2)
+set print "FinalData/Fits.dat" 
+
+N=101;
+gamma_max = 2.0;
+gamma_min = 0.0;
+d_gamma = (gamma_max - gamma_min)/(N-1);
+set terminal png
+#set terminal gif animate
+#set output "fits.gif"
+set yrange[0:1]
+set xrange[-2.5:2.5]
+set samples 2000
+do for[i=0:N-1]{
+  mu=mu*1.1+0.02
+  infile = sprintf('DataPhaseTransition/files/groundstate_gamma_%d.dat',i)
+  fit f(x) infile using 1:2 via N,mu,sigma;
+  gamma = gamma_min + i*d_gamma
+  
+  print gamma, mu, mu_err, sigma, sigma_err
+
+  outfile = sprintf('DataPhaseTransition/plots/gamma_%d.png',i)
+  set output outfile
+  set title sprintf("gamma =  %f", gamma)
+  plot f(x), infile using 1:2
+}
+unset yrange
+unset xrange
+set output
+set terminal qt 2
+unset title
+plot "DataPhaseTransition/Fits.dat" using 1:2 w l
+
+set terminal qt 1
+unset key
+unset title
+plot "DataPhaseTransition/Fits.dat" using 1:2:3 with errorbars
+
+
+reset

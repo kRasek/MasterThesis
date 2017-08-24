@@ -1,0 +1,95 @@
+\section{The Quantum Phase Transition}\label{ch:QuantumPhaseTransition}
+One of the most interesting features of the Dicke model is its phase transition.
+In the thermodynamic limit of infinite spin length or in the classic oscillator limit of vanishing oscillator frequency, there is a transition of the ground state to a parity breaking state at critical coupling $\gamma_c$.
+This can easily be calculated in the classical limit, by minimizing the energy. 
+It should be mentioned that the phase transition does not occur for finite spin length and finite oscillator frequency, because of the finite overlap of the two degenerate states, which allow a parity restoring superposition, with lowered energy \cite{LBAA12}.
+That is why it has been argues by Larons and Irish that the phase transition is not quantum at all, but a purely classical phenomenon, basically just a bifurcation of the classical minimum energy state \cite{JLEKI17}.
+There has been lots of research concerning the phase transition [?-?] and it has gained renewed interest recently, by its experimental realization in a Bose-Einstein-condensate by Baumann et al. \cite{KBCG+10}.
+Since the phase transition itself relies on the parity to be conserved in the system (it is the symmetry that is spontaneously broken), the generalized system without conserved parity will not show a phase transition.
+Nonetheless, since the $J_x$ term of he Hamiltonian can be interpreted as a symmetry breaking field, the system can be used to analyze the phase transition, if the additional field is small, i.e. $\sin\alpha \ll \cos \alpha$.
+It is also worth mentioning that the choice of $\delta$, while changing the critical coupling $\gamma_c$ does not influence the nature of the phase transition, let alone whether it occurs or not.
+Since most aspects of the phase transition have already been discussed, I will keep this chapter short, and only show the basics aspects of the phase transition.
+Since the actual phase transition only occurs in the thermodynamic limit, finite spin length can only approximate the results.
+Still it is notable that the ground state undergoes a significant change as the coupling constant rises.
+For large and small coupling strengths compared to the critical value, there is almost perfect agreement with the classical model, if suitable measures are studied.
+
+%Ground state phase transition
+A phase transition generally is understood to be a rapid change in physical properties of a system as the value of a control parameter changes across a certain critical value.
+As depicted in chapter \ref{ch:ClassLim}, the classical limit of the Dicke model displays such a fundamental change in its state of minimum energy as the coupling strength exceeds the critical value of $\gamma_c$ if the parity is conserved.
+As the order parameter to describe the phase transition the coordinate $Q$ of the point or points of minimum energy is chosen.
+For $\gamma \leq \gamma_c$ it is $Q = 0$, we will call this the normal phase, where the ground state of the spin boson model is a state of no excitations. 
+If the coupling exceeds the critical value $\gamma > \gamma_c$ we find the nontrivial value of $Q = \pm \sqrt{\frac{2}{\nu}\left(\lambda - \frac{1}{4\lambda}\right)}$ with $\lambda$ as in equation \eqref{eq:lambdaCP}, if we chose $0 < \delta < \frac{\pi}{2}$. 
+In order to study the quantum phase transition of the ground state a suitable way to compare the classical points of minimum energy to the quantum mechanical ground state is necessary.
+Thus a projection that shows the oscillator part of the wave function is needed.
+Any given state can be written in the basis of products of fock states and $J_z$-eigenstates with expansion coefficients $\beta_{n,m}$ so that it is 
+\begin{equation}
+	\ket{\Psi} = \sum\limits_{n=0}^{\infty}\sum\limits_{m=-j}^{j}\beta_{n,m}\ket{n}\ket{m} = \sum\limits_{n,m}\beta_{n,m}\ket{n,m}~~.
+\end{equation}
+The Husimi-oscillator projection $Q_\text{Osc}$ projects the oscillator part of the state onto a coherent state, while tracing out the spin part
+\begin{equation}
+	Q_ \text{Osc} (q,p)= \sum\limits_{m} |\braket{\alpha,m|\Psi}|^2 = \sum\limits_{m}|\sum\limits_{n}\beta_{n,m} \braket{\alpha(q,p)|n}|^2~~.
+\end{equation}
+Here $q$ and $p$ are the coordinates of the oscillator, which define the parameter of the coherent state via $\alpha = \sqrt{\frac{j}{2}} \left(q +i p\right)$ as described in chapter \ref{ch:CoherentStates}.
+The projection of the ground state is shown in figure \ref{fig:groundstate} for different parameter choices.
+\begin{figure}[h]
+  \centering
+  \input{figures/tex/groundstate.tex}
+  \caption{groundstate for $j= 30, \gamma = 2, \nu = 0.8, \delta$ and $\alpha$ as given \\ \textcolor{red}{adjust the plot}}\label{fig:groundstate}
+\end{figure}
+As expected, they resemble the classical ground state, by displaying a high value the points of $Q$ and $P$ of the classical minimum energy state. 
+For large spin the ground state will resemble a product state of coherent states in both oscillator and spin part, so it is reasonable to assume a gaussian distribution around the points of the classical ground state.
+Thus, gaussian curves can be fitted through the projection of the ground state along the $p = 0$ axis. 
+The choice of this axis is of course due to the fact $P=0$ in the classical ground state.
+The fitting function takes the form of
+\begin{equation}
+ Q_\text{fit} = N\left( e^{ - \frac{(q - \mu)^2}{\sigma^2}} + \delta_{\alpha,0} e^{ - \frac{(q + \mu)^2}{\sigma^2}}  \right)~~,         
+\label{eq:fit}
+\end{equation}
+where $\delta_{\alpha,0}$ is zero unless parity is conserved, which respect the loss of symmetry if parity is broken.
+The parameter $\mu$ can be considered to be a shift of the grounstate away from the position at $q = 0$, moreso if the parity is broken, since then only one peak is present.
+The parameter $\sigma$ describes the width of the gaussian and will ideally remain constant in absolute values, or fall as $\sqrt{h}^{-1}$ in the rescaled values for $q$.
+
+%results
+%general ground state discussion
+Surprisingly this fit matches almost perfectly even for small spins and for arbitrary coupling strength, exhibiting the biggest deviations for coupling strengths close to the critical coupling.
+
+%energy discussion
+
+
+%mu discussion
+
+\begin{figure}[h]
+  \centering
+  \input{figures/tex/phasetransition_alpha.tex}
+  \caption{groundstate shift $\mu$ for $\delta = \pi/4, \nu = 0.8$ for different values of $\alpha$ for $j = 100$ \textcolor{red}{adjust the plot?}}\label{fig:mu(gamma,alpha)}
+\end{figure}
+For small values of $\alpha$ the shift of the groundstate $\mu$ approaches the value for $\alpha = 0$, while for $\alpha = \pi/2$ a linear relation can be observed, which can be seen in the exact solvability of this system for any spin.
+For $\delta = \pi/4$ and $\alpha = pi/2$ the Hamiltonian reads
+\begin{equation}
+  
+\end{equation}
+
+%sigma discussion
+\begin{figure}[h]
+  \centering
+  \input{figures/tex/sigma_j.tex}
+  \caption{Oscillator width $\sigma$ for different spin length and a linear fit \\
+\textcolor{red}{adjust the plot, add more parameter sets}}\label{fig:sigma(j)}
+\end{figure}
+The fitting parameter $\sigma$ in equation \eqref{eq:fit} resembles the width of the gaussian curve.
+It is shown in figure \ref{fig:sigma(j)} for different sets of parameters, and displays a proportionality of roughly $\sigma \propto 1/\sqrt{j}$, which can be understood by considering that the absolute value of the width of a coherent state is constant and that $q$ is rescaled by $\frac{1}{\sqrt{j}}$ (cf. equation \eqref{eq:variables}).
+The logarithmic values for $\sigma$ for different $j$ are fitted by a linear function $\ln(\sigma) = a \ln(j) + b$ which appears linear in the double logarithmic scale. 
+The fitting parameters are given in table \ref{tab:fitsigma}.
+\begin{center}
+ \begin{tabular}{|c|c|c|c|c|c|}
+ \hline
+  $\delta$ & $\alpha$ & $\gamma$ & $\nu$ & $a$ & $b$\\
+\hline
+  $\frac{\pi}{4}$ & $0$ & $1.3$ & $0.8$ & $-0.505\pm 0.003$ & $0.43\pm 0.01$\\
+  \hline
+
+\end{tabular}
+\captionof{table}{Fitting parameters for $\sigma$ as a funtion of $j$ for different parameter sets}\label{tab:fitsigma}
+\end{center}
+\textcolor{red}{A sentence about different parameters.}
+

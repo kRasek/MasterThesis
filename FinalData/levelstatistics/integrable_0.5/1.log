@@ -1,0 +1,9 @@
+Parameter file contains:
+	2j, with total spin j
+	maximum n (fock state) that is contained in truncated Hamiltonian
+	delta
+	alpha
+	gamma
+	tolerance
+
+This job took 7704.79 seconds. Found 1404 eingenvalues

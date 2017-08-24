@@ -1,0 +1,51 @@
+\subsection{chaos and integrability in quantum mechanics}
+It is important to distinguish the different terms that appear, when discussing dynamics of a quantum system. 
+There is integrable vs. nonintegrable, which describes the number of conserved quantities and as a result, whether or not the trajectory of an arbitrary classical phase space-point can be determined analytically (at least theoretically).
+Then there is regular vs. chaotic, which in classical mechanics describes whether two different initial conditions can have exponentially diverging trajectories. 
+It is a lot more difficult to make global statements about chaocity in a given system, since the dynamics can (and in many cases do) depend on the initial conditions.
+The easiest example is the mathematic pendulum.
+While most of its phase space follows regular dynamics, the separatrix is a line of chaotic points, most prominently the overhead pendulum, where slightly different initial conditions determine whether it moves left or right. 
+That makes it a prime example of a chaotic point in Phase space, while the trajectory for any other point, not on the separatrix, is well known and the dynamics are regular.
+Even this simple example shows that regular or chaotic dynamics are not to be determined for a system, but rather for system and initial conditions.
+
+It is a important question, if and how these fundamental concepts can be converted to quantum physics.
+While the criterion for regularity can easily be translated into quantum mechanics by searching for quantum invariants, that alone can not surfice.
+In quantum mechanics one can find arbitrarily many invariants by time averaging, i.e. taking any operator and crossing out nondiagonal elements in the energy basis.
+The number of invariants can not be the key, but the concept itself is difficult to convert, since any time evolution in quantum mechanics is unitary and by decomposing any initial state in energy eigenstates the exact time evolution is (theoretically) known for any system and initial state.
+On the other hand, the concept of regularity can be understood in a quantum mechanical context, at least an a qualitative level, but there is no quantitative measure for it, as for example a Lyapunov exponent in classical mechanics.
+%Poincare sections-------------------------------------
+
+An established method to distinguish regular and chaotic dynamics in classical mechanics are Poincar\'e sections.
+The idea is to make a two dimensional section of the trajectory by choosing a set of contitions to be fulfilled. 
+If the resulting set of points in the two dimensional picture is limited to a zero- or onedimensional subspace, i.e. a line or a set of distinguished points, the dynamics are regular, if it covers the while plain or an area it means chaotic dynamics, because the trajectory covers the whole energy shell.
+In the quantum mechanical system, there is an equivalent measure, that projects a state onto a coherent state, the parameters of which are defined by the classical Poincar\'e condition.
+\begin{align}
+  Q_\text{Poinc} (\vartheta,\phi)&= |\braket{\alpha_\text{Poinc}(E),z|\Psi}|^2 = |\sum\limits_m \tilde\beta_{m} \braket{z(\vartheta,\phi)|m}|^2\\
+  \text{with  } \tilde\beta_m &= \sum\limits_n \beta_{n,m}\braket{\alpha_\text{Poinc}(E)|n}
+\end{align}
+While this projection shows remarkable resemblance for larger spin, it is not applicable for small spin, because the coherent states become too widely spread and nothing can be read from the data.
+And even for large spin it can only be a qualitative measure and be viewed in comparison to the classical Poincar\'e section.
+
+%Peres Lattice-----------------------------------------
+
+A different and more extensive, albeit still qualitative method is the Peres lattice \cite{AP84}.
+The basic idea is, that in an integrable system the eigenvalues of any independent constants of motion form a lattice. 
+That is to be compared to the tori formed by classical constants of motion which restricts the orbits of he classical system.
+While Peres himself only showed this in the limit $h \rightarrow 0$, Cibils et al. applied this idea to a Dicke model with small spin, and showed that this formalism can still be applied, I think \cite{MCYC94}.
+An advantage of this method is, that it can show a criterion for integrability on a large range of the spectrum, not only for a fixed energy, as the Poincar\'e projections.
+
+\textbf{An example might be given here later...}
+
+
+%Small spin, basic quantum chaos, Müller paper
+Since the classically known and understood concepts of chaos and integrability can not easily be transformed into quantum mechanical terms, new sign/symptoms of chaos have been identified. 
+It is apperent to seek these in the quantum properties that do not have classical counterparts, one of these is the energy spectrum.
+A quite analogue method to searching for invariants in classical mechanics is to assign quantum numbers to the energy levels, and more than one number, that is.
+Inability to do so is seen as an indication of chaos.
+The set of eigenvalues with all but one identical quantum number are usually called a band.
+The different bands are independent of each other, in that they ... what does that even mean?
+That also means that the eigen energies are independent and can be arbitrarily close to each other or even degenerate.
+Bands can cross each other.
+If the system is not integrable, no bands can be created, eigenstates are not independent and there will be level repulsion, that means levels will repel each other.
+In the energy spacing distribution this can be seen at low values of $\Delta E$ (the energy difference).
+It has been shown by ?? in a quite general context, that in an integrable system for large spin the level spacing distribution will

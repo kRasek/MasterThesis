@@ -1,0 +1,81 @@
+\section{The Classical Limit}\label{ch:ClassLim}
+First we should consider the basic properties of the classical limit of the Dicke model.
+The quantum mechanical Hamiltonian \eqref{eq:H} transforms into a classical energy function in the limit of infinite spin length and neglecting quantum mechanical correlations, i.e. the expectation value of a product of operators be the same as the product of the expectation values of the operators.
+For suitable scaling we chose the limit so that $\hbar j = s$ remains constant.
+Also we define dimensionless coupling constants and observables and rescale the energy by $\omega_0 s$.
+By using the definitions
+\begin{align}
+\nu = \frac{\omega}{\omega_0} ~~~~~~ \gamma = \frac{2 g}{\sqrt{\omega \omega_0}} ~~~~~~ L_i = \frac{J_i}{j} ~~~~~~ a =\sqrt{\frac{j}{2}}(Q+iP)~~~~~~ h =\frac{H}{s\omega_0}
+\end{align}
+we arrive at the classical dimensionless energy function
+\begin{equation}
+h(\vec{l}, P,Q) = \cos\alpha l_z + \sin\alpha l_x + \frac 12 \nu (P^2 + Q^2) + \gamma \sqrt{\frac \nu 2}\left( \left( \sin\delta + \cos\delta\right) l_x Q + \left( \sin\delta - \cos \delta \right) l_y P  \right) \label{eq:h}
+\end{equation}
+Notably this can not be called a Hamilton function, because the angular momentum components are not conjugate variables. Of course it would be possible to chose the $z$-component and the angle around the $z$-axis(? or whatever the coordinates are exactly?) as a conjugate variables, but this would make the analytical treatment less descriptive and it turns out that the equations of motion are numerically less stable. This way we need to respect the constraint $l_x^2 + l_y^2 + l_z^2 = 1$.
+
+%Equations of motion
+To derive the equations of motion this is important.
+The simplest way to get to the equations for the angular momentum components is to calculate the Poisson brackets of the different components among each other and get the EoM from the general Hamiltonian equation
+\begin{equation}
+	\frac{\text d}{\text d t} A = \{ A,h \} + \frac{\partial A}{\partial t}~~.
+\end{equation}
+Since the angular momentum components follow the same algebra in Poisson brackets as the spin components in commutators, this simple leads to  $\{ L_k,L_l\} =  \sum\limits_m \epsilon_{klm} L_m$ and the resulting equations of motion are
+\begin{align}
+\dot{Q} &= -\nu Q - \gamma \sqrt{\frac \nu 2} l_x \left( \sin\delta  + \cos\delta \right)\\
+\dot{P} &= +\nu P - \gamma \sqrt{\frac \nu 2} l_y \left( \sin\delta  - \cos\delta \right)\\
+\dot{l_x} &= + \gamma \sqrt{\frac \nu 2} \left( \sin\delta  - \cos\delta \right) P l_z - \cos \alpha l_y\\
+\dot{l_y} &= - \gamma \sqrt{\frac \nu 2} \left( \sin\delta  + \cos\delta \right) Q l_z - \cos \alpha l_x - \sin\alpha l_z\\
+\dot{l_z} &= + \gamma \sqrt{\frac \nu 2}\left[ \left( \sin\delta  + \cos\delta \right) Q l_y - \left( \sin\delta  - \cos\delta \right) P l_x  \right] + \sin \alpha l_y~~.
+\end{align}
+
+%Classical Minimum Energy
+To calculate the classical minimum energy it is advisable to do a case-by-case analysis. 
+If the parity is conserved the minimum energy has a pretty simple form 
+\begin{equation}
+h_\text{min} =
+\begin{cases}
+-1 ~~~~ &\text{  for  }\gamma \leq \gamma_c \\
+-\lambda - \frac{1}{4\lambda} ~~~~ &\text{  for  } \gamma > \gamma_c 
+\end{cases}
+\end{equation}
+where $\gamma_c$ is the critical coupling constant
+\begin{equation}
+\gamma_c = \min\limits_{\pm} \frac{\sqrt{2}}{|\sin\delta \pm \cos \delta|}~~,
+\label{eq:gamma_c}
+\end{equation}
+and
+\begin{equation}
+\lambda = \begin{cases}
+\frac{1}{2} ~~~~ &\text{  for  } \gamma \leq \gamma_c \\
+\frac{\gamma^2}{4}\left( \sin \delta \pm \cos\delta \right)^2 ~~~~ &\text{  for  } \gamma > \gamma_c 
+\end{cases}\label{eq:lambdaCP}
+\end{equation} is the Lagrangian multiplier for the constraint of the spin length with the same sign that minimizes the critical coupling in equation \eqref{eq:gamma_c}.
+The coordinates of the points in phase pace of minimum energy then again depend on $\lambda$.
+It is always 
+\begin{equation}
+l_z = -\frac{1}{2\lambda}~~~\text{ and }~~~ \nu\left( Q^2 + P^2\right) = 2\lambda - \frac{1}{2\lambda}~~.\label{eq:conditions}
+\end{equation}
+If the positive sign in equation \eqref{eq:gamma_c} yields the minimum, then it is $l_y = P = 0$, in case of the negative sign it is $l_x = Q = 0$.
+With the two other conditions \eqref{eq:conditions} and the fixed spin length of $1$ all coordinates are then fixed but for the choice of sign for the other spin component and the nontrivial oscillator variable.
+Both choices are possible here, which is a mark of the parity or the symmetry of changing the sign of $l_x, l_y, P$ and $Q$ for the classical model, which leaves the energy function \eqref{eq:h} invariant.
+In the special case of $\delta = \frac{\pi}{4}$ where both sign give the same result, all points of the circles defined by the equations \eqref{eq:conditions} are valid minimum points.
+Notably the above equations are true for $\gamma\leq \gamma_c$, too, which results in the trivial minimum $l_z = -1$ and $l_x=l_y=P=Q=0$.
+
+%Classical Minimum Energy broken parity
+The case of broken parity is less clear.
+The minimum energy can be written as 
+\begin{equation}
+h_\text{min}  = -\lambda - \frac{\cos^2 \alpha}{4\lambda} + \frac{\sin^2\alpha}{\gamma^2(\sin\delta + \cos\delta)^2 - 4 \lambda}
+\end{equation}
+but the value of $\lambda$ is less easily determined than in the case of conserved parity.
+As above there are two cases to be considered.
+Either it is $\lambda=\frac{\gamma^2}{4}\left( \sin \delta - \cos\delta \right)^2$, which is one of the possible values for $\gamma$ in the case of conserved parity,
+or $\lambda$ is determined as the root of a polynomial of fourth order
+\begin{equation}
+\lambda^4 - 2 \lambda_+ \lambda^3 + (\lambda_+^3 -\frac{1}{4})\lambda^2 + \frac{\cos^2 \alpha}{4} \lambda_+ \lambda -\frac{\cos^2\alpha}{4}\lambda_+^2 = 0~~.
+\end{equation}
+While the general form for the roots of  a polynomial of fourth order are known, they are to unwieldy to use for further analysis. 
+Thus, in the case of broken parity, determining the minimum will be done numerically.
+But it can be seen analytically, that there are no longer two (or more) equivalent solutions to be found, as expected if the parity is broken.
+
+\textbf{Following here will be some plots of the minimum energy, I guess.}

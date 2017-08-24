@@ -1,0 +1,303 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolortrue
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktexttrue
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(6802.00,4534.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(1133,4209){\makebox(0,0){\strut{}$\delta = 0, \alpha = 0$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(364,2802){\makebox(0,0){\strut{}$-5$}}%
+      \put(456,2781){\makebox(0,0){\strut{}$-4$}}%
+      \put(547,2761){\makebox(0,0){\strut{}$-3$}}%
+      \put(639,2741){\makebox(0,0){\strut{}$-2$}}%
+      \put(731,2720){\makebox(0,0){\strut{}$-1$}}%
+      \put(822,2700){\makebox(0,0){\strut{}$0$}}%
+      \put(914,2679){\makebox(0,0){\strut{}$1$}}%
+      \put(1005,2659){\makebox(0,0){\strut{}$2$}}%
+      \put(1097,2639){\makebox(0,0){\strut{}$3$}}%
+      \put(1188,2618){\makebox(0,0){\strut{}$4$}}%
+      \put(1279,2598){\makebox(0,0){\strut{}$5$}}%
+      \put(737,2664){\makebox(0,0){\strut{}$q$}}%
+      \put(1388,2627){\makebox(0,0){\strut{}$-5$}}%
+      \put(1441,2662){\makebox(0,0){\strut{}$-4$}}%
+      \put(1494,2697){\makebox(0,0){\strut{}$-3$}}%
+      \put(1547,2733){\makebox(0,0){\strut{}$-2$}}%
+      \put(1600,2768){\makebox(0,0){\strut{}$-1$}}%
+      \put(1653,2803){\makebox(0,0){\strut{}$0$}}%
+      \put(1706,2838){\makebox(0,0){\strut{}$1$}}%
+      \put(1759,2874){\makebox(0,0){\strut{}$2$}}%
+      \put(1812,2909){\makebox(0,0){\strut{}$3$}}%
+      \put(1865,2944){\makebox(0,0){\strut{}$4$}}%
+      \put(1917,2979){\makebox(0,0){\strut{}$5$}}%
+      \put(1820,2775){\makebox(0,0){\strut{}$p$}}%
+      \put(285,3089){\makebox(0,0)[r]{\strut{}$10^{-20}$}}%
+      \put(285,3206){\makebox(0,0)[r]{\strut{}$10^{-15}$}}%
+      \put(285,3323){\makebox(0,0)[r]{\strut{}$10^{-10}$}}%
+      \put(285,3440){\makebox(0,0)[r]{\strut{}$10^{-5}$}}%
+      \put(285,3557){\makebox(0,0)[r]{\strut{}$10^{0}$}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(3400,4161){\makebox(0,0){\strut{}$\delta = \pi /4, \alpha = 0$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(2627,2778){\makebox(0,0){\strut{}$-5$}}%
+      \put(2718,2759){\makebox(0,0){\strut{}$-4$}}%
+      \put(2810,2741){\makebox(0,0){\strut{}$-3$}}%
+      \put(2902,2722){\makebox(0,0){\strut{}$-2$}}%
+      \put(2993,2703){\makebox(0,0){\strut{}$-1$}}%
+      \put(3085,2685){\makebox(0,0){\strut{}$0$}}%
+      \put(3177,2666){\makebox(0,0){\strut{}$1$}}%
+      \put(3268,2647){\makebox(0,0){\strut{}$2$}}%
+      \put(3360,2629){\makebox(0,0){\strut{}$3$}}%
+      \put(3450,2610){\makebox(0,0){\strut{}$4$}}%
+      \put(3542,2592){\makebox(0,0){\strut{}$5$}}%
+      \put(3004,2656){\makebox(0,0){\strut{}$q$}}%
+      \put(3655,2622){\makebox(0,0){\strut{}$-5$}}%
+      \put(3708,2655){\makebox(0,0){\strut{}$-4$}}%
+      \put(3761,2687){\makebox(0,0){\strut{}$-3$}}%
+      \put(3814,2719){\makebox(0,0){\strut{}$-2$}}%
+      \put(3867,2751){\makebox(0,0){\strut{}$-1$}}%
+      \put(3920,2784){\makebox(0,0){\strut{}$0$}}%
+      \put(3973,2816){\makebox(0,0){\strut{}$1$}}%
+      \put(4026,2848){\makebox(0,0){\strut{}$2$}}%
+      \put(4079,2880){\makebox(0,0){\strut{}$3$}}%
+      \put(4132,2913){\makebox(0,0){\strut{}$4$}}%
+      \put(4184,2945){\makebox(0,0){\strut{}$5$}}%
+      \put(4087,2758){\makebox(0,0){\strut{}$p$}}%
+      \put(2552,3045){\makebox(0,0)[r]{\strut{}$10^{-20}$}}%
+      \put(2552,3152){\makebox(0,0)[r]{\strut{}$10^{-15}$}}%
+      \put(2552,3259){\makebox(0,0)[r]{\strut{}$10^{-10}$}}%
+      \put(2552,3366){\makebox(0,0)[r]{\strut{}$10^{-5}$}}%
+      \put(2552,3474){\makebox(0,0)[r]{\strut{}$10^{0}$}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(5667,4161){\makebox(0,0){\strut{}$\delta = \pi /2, \alpha = 0$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(4894,2778){\makebox(0,0){\strut{}$-5$}}%
+      \put(4985,2759){\makebox(0,0){\strut{}$-4$}}%
+      \put(5077,2741){\makebox(0,0){\strut{}$-3$}}%
+      \put(5169,2722){\makebox(0,0){\strut{}$-2$}}%
+      \put(5260,2703){\makebox(0,0){\strut{}$-1$}}%
+      \put(5352,2685){\makebox(0,0){\strut{}$0$}}%
+      \put(5444,2666){\makebox(0,0){\strut{}$1$}}%
+      \put(5535,2647){\makebox(0,0){\strut{}$2$}}%
+      \put(5627,2629){\makebox(0,0){\strut{}$3$}}%
+      \put(5717,2610){\makebox(0,0){\strut{}$4$}}%
+      \put(5809,2592){\makebox(0,0){\strut{}$5$}}%
+      \put(5271,2656){\makebox(0,0){\strut{}$q$}}%
+      \put(5922,2622){\makebox(0,0){\strut{}$-5$}}%
+      \put(5975,2655){\makebox(0,0){\strut{}$-4$}}%
+      \put(6028,2687){\makebox(0,0){\strut{}$-3$}}%
+      \put(6081,2719){\makebox(0,0){\strut{}$-2$}}%
+      \put(6134,2751){\makebox(0,0){\strut{}$-1$}}%
+      \put(6187,2784){\makebox(0,0){\strut{}$0$}}%
+      \put(6240,2816){\makebox(0,0){\strut{}$1$}}%
+      \put(6293,2848){\makebox(0,0){\strut{}$2$}}%
+      \put(6346,2880){\makebox(0,0){\strut{}$3$}}%
+      \put(6399,2913){\makebox(0,0){\strut{}$4$}}%
+      \put(6451,2945){\makebox(0,0){\strut{}$5$}}%
+      \put(6354,2758){\makebox(0,0){\strut{}$p$}}%
+      \put(4819,3045){\makebox(0,0)[r]{\strut{}$10^{-20}$}}%
+      \put(4819,3152){\makebox(0,0)[r]{\strut{}$10^{-15}$}}%
+      \put(4819,3259){\makebox(0,0)[r]{\strut{}$10^{-10}$}}%
+      \put(4819,3366){\makebox(0,0)[r]{\strut{}$10^{-5}$}}%
+      \put(4819,3474){\makebox(0,0)[r]{\strut{}$10^{0}$}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(1133,1894){\makebox(0,0){\strut{}$\delta = 3\pi /4, \alpha = 0$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(360,511){\makebox(0,0){\strut{}$-5$}}%
+      \put(451,492){\makebox(0,0){\strut{}$-4$}}%
+      \put(543,474){\makebox(0,0){\strut{}$-3$}}%
+      \put(635,455){\makebox(0,0){\strut{}$-2$}}%
+      \put(726,436){\makebox(0,0){\strut{}$-1$}}%
+      \put(818,418){\makebox(0,0){\strut{}$0$}}%
+      \put(910,399){\makebox(0,0){\strut{}$1$}}%
+      \put(1001,380){\makebox(0,0){\strut{}$2$}}%
+      \put(1093,362){\makebox(0,0){\strut{}$3$}}%
+      \put(1183,343){\makebox(0,0){\strut{}$4$}}%
+      \put(1275,325){\makebox(0,0){\strut{}$5$}}%
+      \put(737,389){\makebox(0,0){\strut{}$q$}}%
+      \put(1388,355){\makebox(0,0){\strut{}$-5$}}%
+      \put(1441,388){\makebox(0,0){\strut{}$-4$}}%
+      \put(1494,420){\makebox(0,0){\strut{}$-3$}}%
+      \put(1547,452){\makebox(0,0){\strut{}$-2$}}%
+      \put(1600,484){\makebox(0,0){\strut{}$-1$}}%
+      \put(1653,517){\makebox(0,0){\strut{}$0$}}%
+      \put(1706,549){\makebox(0,0){\strut{}$1$}}%
+      \put(1759,581){\makebox(0,0){\strut{}$2$}}%
+      \put(1812,613){\makebox(0,0){\strut{}$3$}}%
+      \put(1865,646){\makebox(0,0){\strut{}$4$}}%
+      \put(1917,678){\makebox(0,0){\strut{}$5$}}%
+      \put(1820,491){\makebox(0,0){\strut{}$p$}}%
+      \put(285,778){\makebox(0,0)[r]{\strut{}$10^{-20}$}}%
+      \put(285,885){\makebox(0,0)[r]{\strut{}$10^{-15}$}}%
+      \put(285,992){\makebox(0,0)[r]{\strut{}$10^{-10}$}}%
+      \put(285,1099){\makebox(0,0)[r]{\strut{}$10^{-5}$}}%
+      \put(285,1207){\makebox(0,0)[r]{\strut{}$10^{0}$}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(3400,1846){\makebox(0,0){\strut{}$\delta = \pi /4, \alpha = \pi /100$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(2622,486){\makebox(0,0){\strut{}$-5$}}%
+      \put(2713,470){\makebox(0,0){\strut{}$-4$}}%
+      \put(2805,453){\makebox(0,0){\strut{}$-3$}}%
+      \put(2896,436){\makebox(0,0){\strut{}$-2$}}%
+      \put(2988,419){\makebox(0,0){\strut{}$-1$}}%
+      \put(3080,402){\makebox(0,0){\strut{}$0$}}%
+      \put(3171,385){\makebox(0,0){\strut{}$1$}}%
+      \put(3263,368){\makebox(0,0){\strut{}$2$}}%
+      \put(3355,351){\makebox(0,0){\strut{}$3$}}%
+      \put(3445,334){\makebox(0,0){\strut{}$4$}}%
+      \put(3537,317){\makebox(0,0){\strut{}$5$}}%
+      \put(3004,380){\makebox(0,0){\strut{}$q$}}%
+      \put(3655,350){\makebox(0,0){\strut{}$-5$}}%
+      \put(3708,379){\makebox(0,0){\strut{}$-4$}}%
+      \put(3761,409){\makebox(0,0){\strut{}$-3$}}%
+      \put(3814,438){\makebox(0,0){\strut{}$-2$}}%
+      \put(3867,467){\makebox(0,0){\strut{}$-1$}}%
+      \put(3920,497){\makebox(0,0){\strut{}$0$}}%
+      \put(3973,526){\makebox(0,0){\strut{}$1$}}%
+      \put(4026,555){\makebox(0,0){\strut{}$2$}}%
+      \put(4079,584){\makebox(0,0){\strut{}$3$}}%
+      \put(4132,614){\makebox(0,0){\strut{}$4$}}%
+      \put(4184,643){\makebox(0,0){\strut{}$5$}}%
+      \put(4087,473){\makebox(0,0){\strut{}$p$}}%
+      \put(2552,734){\makebox(0,0)[r]{\strut{}$10^{-20}$}}%
+      \put(2552,832){\makebox(0,0)[r]{\strut{}$10^{-15}$}}%
+      \put(2552,928){\makebox(0,0)[r]{\strut{}$10^{-10}$}}%
+      \put(2552,1026){\makebox(0,0)[r]{\strut{}$10^{-5}$}}%
+      \put(2552,1124){\makebox(0,0)[r]{\strut{}$10^{0}$}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(5667,1846){\makebox(0,0){\strut{}$\delta = \pi /4, \alpha = -\pi /100$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(4889,486){\makebox(0,0){\strut{}$-5$}}%
+      \put(4980,470){\makebox(0,0){\strut{}$-4$}}%
+      \put(5072,453){\makebox(0,0){\strut{}$-3$}}%
+      \put(5163,436){\makebox(0,0){\strut{}$-2$}}%
+      \put(5255,419){\makebox(0,0){\strut{}$-1$}}%
+      \put(5347,402){\makebox(0,0){\strut{}$0$}}%
+      \put(5438,385){\makebox(0,0){\strut{}$1$}}%
+      \put(5530,368){\makebox(0,0){\strut{}$2$}}%
+      \put(5622,351){\makebox(0,0){\strut{}$3$}}%
+      \put(5712,334){\makebox(0,0){\strut{}$4$}}%
+      \put(5804,317){\makebox(0,0){\strut{}$5$}}%
+      \put(5271,380){\makebox(0,0){\strut{}$q$}}%
+      \put(5922,350){\makebox(0,0){\strut{}$-5$}}%
+      \put(5975,379){\makebox(0,0){\strut{}$-4$}}%
+      \put(6028,409){\makebox(0,0){\strut{}$-3$}}%
+      \put(6081,438){\makebox(0,0){\strut{}$-2$}}%
+      \put(6134,467){\makebox(0,0){\strut{}$-1$}}%
+      \put(6187,497){\makebox(0,0){\strut{}$0$}}%
+      \put(6240,526){\makebox(0,0){\strut{}$1$}}%
+      \put(6293,555){\makebox(0,0){\strut{}$2$}}%
+      \put(6346,584){\makebox(0,0){\strut{}$3$}}%
+      \put(6399,614){\makebox(0,0){\strut{}$4$}}%
+      \put(6451,643){\makebox(0,0){\strut{}$5$}}%
+      \put(6354,473){\makebox(0,0){\strut{}$p$}}%
+      \put(4819,734){\makebox(0,0)[r]{\strut{}$10^{-20}$}}%
+      \put(4819,832){\makebox(0,0)[r]{\strut{}$10^{-15}$}}%
+      \put(4819,928){\makebox(0,0)[r]{\strut{}$10^{-10}$}}%
+      \put(4819,1026){\makebox(0,0)[r]{\strut{}$10^{-5}$}}%
+      \put(4819,1124){\makebox(0,0)[r]{\strut{}$10^{0}$}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{figures/tex/groundstate}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup

@@ -1,0 +1,9 @@
+1 2 3 4 5 6 7 8 9 10 20 40 60 80 100 200 //all the j 
+2000			nmax
+0			delta
+0			alpha
+1			gamma
+0.8			nu
+1e-08			tol
+//invariants are 
+energy	a^+ J_-	z	x	q	n

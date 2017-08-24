@@ -1,0 +1,12 @@
+Parameter file contains:
+	2j, with total spin j
+	maximum n (fock state) that is contained in truncated Hamiltonian
+	delta
+	alpha
+	tolerance
+	Number of gammas
+	gamma_min
+	gamma_max
+	gamma[i]
+
+This job took 1499.59 seconds (cpu).

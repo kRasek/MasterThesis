@@ -1,0 +1,49 @@
+\section{The Case of Small Spins}
+While for many phenomena of the Dicke model it is useful and necessary to study large spin, some elementary effects are observable in the case of small spin ($j= 1/2, 1 ,\dots$) too.
+More importantly, if the spin is small patterns can be found that are hidden in the larger spin cases.
+Following the work of Müller et al. [?], It is possible to show that the level spacing distribution follows a well defined limit starting from the smallest spin of $1/2$ to arbitrarily large spin.
+This allows a more quantitative approach to the question of integrability.
+It is known that for an integrable case the level spacing distribution becomes \textcolor{red}{Poissonic} in the thermodynamic limit, while in the nonitegrable case it will approach a Wigner distribution [?].
+As shown by Müller et al it is possible for the integrable case of the Dicke model ($\delta = 0, \alpha = 0$) to find a universal distribution function for arbitrary spin that describes the level spacing distribution and converges to a Poisson distribution in the limit of infinite spin length, at least for a specific set of parameters in which the coupling strength is relatively weak ($\gamma = 0.5$).
+
+In the following paragraph I will try to generalize this method to the nonintegrable case, once for arbitrary $\delta$ and once for arbitrary alpha, while the other parameter remains zero.
+What we first need are candidates of function sequence that converges to the Wigner distribution.
+The simplest candidate would be
+\begin{equation}
+	p_n(x) = x \left(1-\frac{x^2}{n}\right)^n
+\end{equation}
+with the limit $\lim\limits_{n\rightarrow \infty} p_n(x) = x e^{-x^2}$ for $-1 \leq x \leq 1$.
+Since the general density distribution found by Müller et al for the integrable case is only applicable for one specific set of parameters, here we will try to achieve the same, while a general analytical formula suitable for arbitrary parameters is seemingly impossible to find.
+%Peres lattices for small spin
+The emergence of nonintegrability can also be seen in the spectrum of small spin if we apply the method of Peres lattices in this regime.
+Here the transition from organized lattices to chaotic order is better observable, since the lattices are well separated strands or bands of points, so crossing or interaction of any kind between them is a sign of nonitegrability.
+The reason for the bands is the existence of some other conserved quantity besides the energy in this case the total number of excitations. 
+If the parity is conserved we should see two independent sets of bands that are independent even in the nonitegrable case but in the small spin case it might be difficult to distinguish between crossing and avoided crossing of bands, since they are not continuous. 
+It is also important to notice that, while fundamentally interchangeable, the specific form of the bands depends heavily on the choice of invariants.
+
+%Method of Müller et al
+The method that Müller et al. used to find the model for the energy spacing is a set of $n = 2j+1$ one dimensional lattices with incommensurable spacings. 
+Calculating the spacing distribution of the superposition of those lattices yields a reasonably good approximation for the numerically determined spacing distribution of the spin boson model in the limit of small differences in the lattice constants.
+That model is reasonable if we assume that the bands have almost equidistant spacing internally, which is a reasonable assumption, but only if small sections of the spectrum are considered.
+The assumption of independent lattices for the different bands is justified by the integrability effect, so in the nonintegrable case such a model can not hold.
+I have recreated the spacing distribution for several spin length in figure \ref{fig:hist_I0.5} for the integrable case.
+Here it can be seen, that only for large spin the distribution matches the general formula
+\begin{equation}
+  p_n (x) = x \left( 1 - \frac{x}{n}\right)^n \label{eq:p_n-I}
+\end{equation}
+which was postulated by Müller et al. matches the dirstribution of the spacings to a agreeable level.
+\begin{figure}[h]
+  \centering
+  \input{figures/tex/histograms_I.tex}
+  \caption{histograms of the energy spacings for different spin lengths in the integrable case}\label{fig:hist_I0.5}
+\end{figure}
+If other parameters are chosen the match is even worse, especially for $\gamma = 1$ where for example the $j=1$ distribution almost perfectly matches a step function instead of a linear function, as can be seen in figure \ref{fig:hist_I1}.
+Observing the spacing as a function of the engery where it ocurs can not only explain this behaviour, it also shows why the generalized formula \eqref{eq:p_n-I} might not be the best way to describe the energy spacings.
+Depicted in figure \ref{fig:dE_I} are the energy spacings $\Delta \epsilon_i = \epsilon_i - \epsilon_{i-1}$ against $\epsilon_i$ and a clear structure is visible.
+Three bands can be distinguished which originate from the independent threedimensional subspaces, that the hilbertspace collapses into in the integrable case.
+These bands are each partwise linear with a general triangular structure.
+In the case of $\gamma = 1$ two of these bands overlap exactly and there are no bends, so that only triangular bands, the density of which is apparently a step function.
+For other parameter choices the triangular bands have bends somewhere along the slopes and (in the case of $j = 1$) there are three distinguished bands.
+These two properties create a fairly linear slope, so equation \eqref{eq:p_n-I} is applicable.
+Also $\nu = 1$ is necessary to for the unusual step distribution.
+

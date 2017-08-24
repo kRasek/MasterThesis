@@ -1,0 +1,9 @@
+PWD /home/rasek/Documents/Master/MasterText
+INPUT /net/sw/texlive/2016/texmf-var/web2c/luatex/lualatex.fmt
+INPUT ./Master.tex
+OUTPUT build/Master.log
+INPUT /net/sw/texlive/2016/texmf-dist/tex/latex/base/article.cls
+INPUT /net/sw/texlive/2016/texmf-dist/tex/latex/base/article.cls
+INPUT /net/sw/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+INPUT /net/sw/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+INPUT /net/sw/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
